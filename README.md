@@ -2,7 +2,7 @@
 
 **Advent of Code 2020**
 
-My attempt at solving advent of code in Elixir
+My attempt at solving advent of code in Elixir. But, sometimes I revert to python.
 
 ## Installation
 
