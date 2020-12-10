@@ -23,12 +23,13 @@ defmodule Day10 do
 
   def build_map([], acc), do: Map.get(acc, 0)
   def build_map([first|rest], acc) do
+    candidates = for {node, num_paths} <- acc, node <= first + 3, do: {node, num_paths}, into: %{}
     build_map(
       rest,
       Map.put(
-        acc,
+        candidates,
         first,
-        Enum.sum(for {node, num_paths} <- acc, node <= first + 3, do: num_paths)))
+        Enum.sum(Map.values(candidates))))
   end
   
   def part2(input) do
