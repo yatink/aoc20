@@ -2,7 +2,7 @@
 
 **Advent of Code 2020**
 
-My attempt at solving advent of code in Elixir. But, sometimes I revert to python.
+My attempt at solving advent of code in Elixir. But, sometimes I revert back to python, python solutions are in the `py_src` directory
 
 ## Installation
 
