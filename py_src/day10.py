@@ -77,12 +77,15 @@ def part2(lines):
         if not remaining:
             break
         next = remaining[0]
-        candidates = filter(lambda x: x[0] <= next + 3, mp.iteritems())
-        mp[next] = sum(x[1] for x in candidates)
+        candidates = dict(filter(lambda x: x[0] <= next + 3, mp.iteritems()))
+        candidates[next] = sum(candidates.itervalues())
+        mp = candidates
         remaining = remaining[1:]
     return mp[0]
 
-print part1(real_input)
-print part2(real_input)
+#print part1(real_input)
+with open('/tmp/hello.in') as f:
+    large_input = f.read()
+    print part2(large_input)
 
 
